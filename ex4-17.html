@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>이미지 테두리 만들기</title>
+  <style>
+    p {
+      background: yellow;
+      width: 210px; 
+      height: 60px;
+      padding: 10px;
+      border: 20px solid lightblue; /*이미지테두리 만드려면 너비가 0이상이어야함*/
+    }
+    #round { border-image: url("media/border.png") 30 round; } /*이미지반복배치, 테두리 길이만큼 이미지 자동조절*/
+    #repeat { border-image: url("media/border.png") 30 repeat; } /*이미지반복배치, 이미지 조절안됨(이미지 잘림)*/
+    #stretch { border-image: url("media/border.png") 30 stretch; } /*이미지를 테두리 길이만큼 늘여서 배치*/
+  </style>
+</head>
+<body>
+  <h2>이미지 테두리 만들기</h2>
+  <hr>
+  다음은 원본 이미지입니다.<br>
+  <img src="./media/border.png" alt="원본">
+  <hr>
+  <p>20x20 크기의 회색 테두리를 가진 p태그</p>
+  <p id="round">round스타일 이미지 테두리</p>
+  <p id="repeat">repeat스타일 이미지 테두리</p>
+  <p id="stretch">stretch스타일 이미지 테두리</p>
+</body>
+</html>
